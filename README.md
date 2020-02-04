@@ -18,15 +18,15 @@ K-Means clustering is used in python through Kmeans function for our project. Cl
 NBA website. Various physical attributes were used to perform the clustering like height, weight, points scored, matches played and even 
 finger length of players. Once clustering is done, the draft players are seggregated into 8 positions (0-7). 
 
-The 8 positions were,
-Centers - The traditional centers like Hasan Whiteside and Andre Drummond 
-Scoring Forwards - The forwards who can shoot three like KD and Kevin Love
-Slashing Forwards - Forwards who like to go to the rim like LeBron James and Giannis Antetokounmpo
-Two Way Forwards - Forwards who predominently are defenders like Draymond Green 
-Combo Guards - Guards who are predominently defenders like Pat Beverly 
-Scoring Guards - Guards who are experts in shooting as well as creating their own shots like Kobe and Don Mitchell 
-Passing Guards - Guards who are experts in passing as well as scoring like Steph Curry and Trae Young
-Playmakers - Guards who are experts in passing like Rajon Rondo and Lonzo Ball
+The 8 positions were,<br>
+Centers - The traditional centers like Hasan Whiteside and Andre Drummond <br>
+Scoring Forwards - The forwards who can shoot three like KD and Kevin Love<br>
+Slashing Forwards - Forwards who like to go to the rim like LeBron James and Giannis Antetokounmpo <br>
+Two Way Forwards - Forwards who predominently are defenders like Draymond Green <br>
+Combo Guards - Guards who are predominently defenders like Pat Beverly <br>
+Scoring Guards - Guards who are experts in shooting as well as creating their own shots like Kobe and Don Mitchell <br> 
+Passing Guards - Guards who are experts in passing as well as scoring like Steph Curry and Trae Young <br>
+Playmakers - Guards who are experts in passing like Rajon Rondo and Lonzo Ball <br>
 
 The last years drafts were clustered into these 8 positions.
 
@@ -34,8 +34,8 @@ The result of this algorithm is then fed to the HTML web page where a user can s
 
 
 By:
-Team "Missing In Action"
-Jibin
-Jithin
-Sanjeev
-Viknesh
+Team "Missing In Action"  <br>
+Jibin<br>
+Jithin<br>
+Sanjeev<br>
+Viknesh<br>
