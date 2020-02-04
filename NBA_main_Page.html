@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body style="background-color:powderblue;">
+
+<style>
+body {
+  background-image: url('img6.jpg');
+background-repeat:no-repeat;
+background-attachment: fixed;
+  background-size: cover;
+
+}
+</style>
+
+<h1>NBA Draft Prediction</h1>
+    <div id="filters">
+
+    </div>
+
+    <div id="results">
+
+    </div>
+
+<script>
+    var playersByPosition = [
+
+{ 
+name: 'Select a Position',
+players:['Select a Position'],
+
+},
+
+        {
+            name: 'Center',
+            players: ['Jaxson Hayes <br><a href="https://placeholder.com"><img src="https://www.interbasket.net/wp-content/uploads/what-is-Jaxson-Hayes-race-768x534.jpg" alt="Image" height="260" width="260"></a><br> HT: 6.11 1/2 <br> WT: 219 <br> WING: 7.3 <br> FROM: Texas<br><br>The Pelicans trade back and could address a glaring need at center with this pick. <br>Most mocks have Hayes lower but we see vast potential and a player who is just scratching the surface','Bruno Fernando<br><a href="https://placeholder.com"><img src="https://i2.wp.com/www.sportstalkatl.com/wp-content/uploads/2019/06/164190314-07-nebraska-v-maryland.jpg?w=1000&ssl=1" alt="Image" height="260" width="260"></a> <br> HT: 6.10 <br> WT: 237 <br> WING: 7.3 <br> FROM: Maryland (Angola) <br> <br>Bruno has too much natural talent to fall far on draft day.<br> The Blazers need to bolster the front line and could use a defensive stopper like Bruno.','Daniel Gafford <br> <a href="https://placeholder.com"><img src="https://www.businessinsider.in/thumb/msid-68222789,width-640,resizemode-4,imgsize-1140252/The-top-30-prospects-in-the-2019-NBA-Draft/22-Daniel-Gafford-F/C.jpg" alt="Image" height="200" width="200"></a> <br> HT: 6.10 1/2 <br>  WT: 237 <br> WING: 7.2 1/4 <br> FROM: Arkansas <br> <br> Gafford is a mobile big who is at his best running the floor and defending in the lane. <br>Is not an ideal fit in the modern NBA but has intriguing tools.'],
+  },
+
+{
+            name: 'Scoring Forward',
+            players: ['Rui Hachimura <br><a href="https://placeholder.com"><img src="https://img.bleacherreport.net/img/images/photos/003/816/392/hi-res-1f164bb71bc70092ff5d7ba8ad56cad4_crop_north.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top" alt="Image" height="260" width="260"></a><br> HT: 6.8 <br> WT: 225  WING: 7.2 <br> FROM: Gonzaga (Japan) <br> <br>Rui has some tantalizing upside and has shown steady improvement from year to year. <br>The Spurs love to mold raw talent into NBA players.','P.J Washington <br><a href="https://placeholder.com"><img src="https://img.bleacherreport.net/img/images/photos/003/817/304/hi-res-75d59622d5029eae4e95c15c5daa008f_crop_north.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top" alt="Image" height="260" width="260"></a><br>HT: 6.8 <br> WT: 230 <br> WING: 7.2 1/4 <br> FROM: Kentucky <br> <br> P.J. is a bit undersized but makes up for it with great length and toughness. A Pacers type of player. <br>The team needs help at guard but should not pass on value','Sekou Doumbouya <br><a href="https://placeholder.com"><img src="https://www.talkbasket.net/wp-content/uploads/2020/01/Sekou-Doumbouya-1024x674.png" alt="Image" height="260" width="260"></a> <br> HT: 6.9 <br> WT: 215 <br> WING: 6.11 <br> FROM: France <br><br>A strong second half of the season has Sekou on the rise. <br>The Wizards need to go with the best player available and that is Sekou.','Chuma Okeke <br> <a><img src="https://cdn.nba.net/nba-drupal-prod/2019-06/Chuma_Okeke219.jpg" alt="Image" height="260" width="260"</a><br> HT: 6.8 <br> WT: 235 <br> WING: NA <br> FROM: Auburn <br><br> A versatile combo forward who can stretch the floor and defend all over the court. <br>The knee injury might knock him down a few spots but he could still go in round 1 or early round 2. <br>No combine measurements.','Goga Bitadze <br> <a><img src="https://www.gannett-cdn.com/presto/2019/10/03/PIND/9117717d-9ff3-4ef8-89da-0bc1b4fa32ae-0106_4Gallery.JPG?width=540&height=&fit=bounds&auto=webp" alt="Image" height="260" width="260"</a><br>HT: 6.11 <br> WT: 250 <br> WING: 7.2 <br> FROM: Int. Georgia <br><br> Goga might be the next Jokic (or at least the next Vucevic)<br> which is just what the Hornets need. Goga could go as high as top 10.'],
+        },
+{
+            name: 'Slashing Forward',
+            players: ['Cameron Johnson <br><a href="https://placeholder.com"><img src="https://imagesvc.timeincapp.com/v3/fan/image?url=https%3A%2F%2Fkeepingitheel.com%2Fwp-content%2Fuploads%2Fgetty-images%2F2017%2F07%2F1071595546.jpeg&c=sc&w=850&h=560" alt="Image" height="260" width="260"></a><br>HT: 6.8 1/2 <br> WT: 205 <br> WING: 6.10 <br> FROM: UNC <br><br> The Thunder are in win now mode and could use a ready to play, high BBIQ baller like Cam Johnson. <br>He has got a skill set that fits todays NBA perfectly.','Keldon Johnson <br><a href="https://placeholder.com"><img src="https://img.bleacherreport.net/img/images/photos/003/803/308/hi-res-02a220e687575f615ead222e70c1fd69_crop_north.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top" alt="Image" height="260" width="260"></a><br>HT: 6.6 <br> WT: 211 <br> WING: 6.9 1/4 <br> FROM: Kentucky<br><br> The Celtics reload continues. <br>And the depth of this first round is on full display with a talent like Johnson falling to the twenties.'],
+        },
+        {
+            name: 'Two Way Forward',
+            players: ['Zion Williamson <br><a href="https://placeholder.com"><img src="https://supchina.com/wp-content/uploads/2019/07/Zion-Williamson-820x500.jpg" alt="Image" height="260" width="260"></a><br>HT: 6.6 <br> WT: 272 <br> WING: 6.10 <br> FROM: Duke <br><br> Zion already got a whole bunch of new running mates (Lonzo, BI, Hart), plus the no.4 pick. <br>The Pelicans will be must watch TV next season.','De Andre Hunter <br><a href="https://placeholder.com"><img src="https://img.bleacherreport.net/img/images/photos/003/810/831/hi-res-9099b04a184ffc4647d1d4ed05e3ab43_crop_north.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top" alt="Image" height="260" width="260"></a><br>HT: 6.7 <br> WT: 222 <br> WING: 7.0 <br> FROM: Virginia <br><br> The Hawks make the move up, apparently targeting DeAndre Hunter. <br> He is a perfect fit with the Hawks young core.','Matisse Thybulle <br><a href="https://placeholder.com"><img src="https://mk0slamonlinensgt39k.kinstacdn.com/wp-content/uploads/2019/12/GettyImages-1193622156.jpg" alt="Image" height="260" width="260"></a><br> HT: 6.6 <br> WT: 195 <br> WING: 7.0 <br> FROM: Washington <br><br> One of the best all around defenders to enter the League in years. <br>Just needs to be able to hit the open 3 and polish up his ball <br> handling to have a chance to earn minutes.','Darius Bazley <br><a href="https://placeholder.com"><img src="https://i0.wp.com/thefranchiseok.com/wp-content/uploads/2019/10/Baze.jpg?zoom=1.25&resize=758%2C454" alt="Image" height="260" width="260"></a><br> HT: 6.9 <br> WT: 208 <br> WING: 7.0 <br> FROM: USA<br><br> Bazley is one of the mystery men of the draft after sitting out a year but he had a nice draft combine. <br>He is a smooth wing with loads of natural talent.','Nicolas Claxton <br><a href="https://placeholder.com"><img src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278067.png&w=350&h=254" alt="Image" height="260" width="260"></a><br>HT: 6.11 <br> WT: 220 <br> WING: NA <br> FROM: Georgia <br><br> The Celtics will need help up front with Horford out the <br>door and Claxton brings a lot to the table.<br> He plays both ends of the floor and can keep up in a fast paced game.'],
+        },
+{
+            name: 'Combo Guard',
+            players: ['Ja Morant <br><a href="https://placeholder.com"><img src="https://www.si.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_700/MTY5MTczNjQ1NDA5NjU4MzMx/ja-morant-kevin-love-dunk.webp" alt="Image" height="260" width="260"></a><br> HT: 6.3 <br> WT: 175 <br> WING: NA <br> FROM: Murray State <br><br> If the Grizzlies stay at no.2 Morant should be the pick but the trade <br>rumors are swirling.','RJ Barret <br><a href="https://placeholder.com"><img src="https://specials-images.forbesimg.com/imageserve/a35df74c037e4e12aaa11e471e4ce9c5/960x0.jpg?fit=scale" alt="Image" height="260" width="260"></a><br>HT: 6.6 <br> WT: 190 <br> WING: 6.9 <br> FROM: Duke (Canada) <br><br> NY will consider Culver and Garland but it will be too hard to pass on an <br>alpha dog like Barrett.','Jarrett Culver <br><a href="https://placeholder.com"><img src="https://imagesvc.timeincapp.com/v3/fan/image?url=https%3A%2F%2Ffansided.com%2Fwp-content%2Fuploads%2Fgetty-images%2F2018%2F08%2F1133617799.jpeg&c=sc&w=850&h=560" alt="Image" height="260" width="260"></a><br>HT: 6.6 3/4 <br> WT: 194 <br> WING: 6.9 1/2 <br> FROM: Texas Tech <br><br> Culver is a great fit next to Sexton, giving the Cavs a dynamic young <br>duo to build around.','Cam Reddish <br><a href="https://placeholder.com"><img src="https://gossipgist.com/uploads/25950/screenshot.png" alt="Image" height="260" width="260"></a><br> HT: 6.8 <br> WT: 208 <br >WING: 7.0 1/2 <br> FROM: Duke <br><br> Cam would land in a good situation in ATL, being able to play off the ball next to a talented <br>passer like Trae Young.'],
+        },
+{
+            name: 'Scoring Guard',
+            players: ['RJ Barrett <br><a href="https://placeholder.com"><img src="https://specials-images.forbesimg.com/imageserve/a35df74c037e4e12aaa11e471e4ce9c5/960x0.jpg?fit=scale" alt="Image" height="260" width="260"></a><br><br>HT: 6.6 <br> WT: 190 <br> WING: 6.9 <br> FROM: Duke (Canada) <br><br> NY will consider Culver and Garland but it will be too hard to pass on an <br>alpha dog like Barrett.','Jarrett Culver <br><a href="https://placeholder.com"><img src="https://imagesvc.timeincapp.com/v3/fan/image?url=https%3A%2F%2Ffansided.com%2Fwp-content%2Fuploads%2Fgetty-images%2F2018%2F08%2F1133617799.jpeg&c=sc&w=850&h=560" alt="Image" height="260" width="260"></a><br>HT: 6.6 3/4 <br> WT: 194 <br> WING: 6.9 1/2 <br> FROM: Texas Tech <br><br> Culver is a great fit next to Sexton, giving the Cavs a dynamic young <br>duo to build around.','Coby White <br><a href="https://placeholder.com"><img src="https://sportshub.cbsistatic.com/i/r/2019/03/06/c18945a4-9dfd-400f-bb48-7b8baa8326be/thumbnail/770x433/af1393b839c090a72000e4c59ac76f70/usatsi-12183430.jpg" alt="Image" height="260" width="260"></a><br>HT: 6.4 3/4 <br> WT: 191 <br> WING: 6.5 <br> FROM: UNC <br><br> The Bulls will take the last remaining of Garland and Coby White.<br> It is time to move on from Dunn and White would bring new excitement to the backcourt.','Cam Raddish <br> <a><img src="https://gossipgist.com/uploads/25950/screenshot.png" alt="Image" height="260" width="260"</a><br> HT: 6.8 <br> WT: 208 <br >WING: 7.0 1/2 <br> FROM: Duke <br><br> Cam would land in a good situation in ATL, being able to play off the ball next to a talented <br>passer like Trae Young.','Tyler Herro <br> <a><img src="https://media.gq.com/photos/5dfb991efeffa9000973dbf9/16:9/w_2560%2Cc_limit/Tyler-Herro-basketball-player-Miami-Heat-gq-december-2019.jpg" alt="Image" height="260" width="260"</a><br>HT: 6.6 <br> WT: 192 <br> WING: 6.3 1/4 <br> FROM: Kentucky <br><br> Herro enters the League at a perfect time, when outside shooting is at a premium.<br> If this pick stays with the Celtics, Herro would be a nice addition.'],
+        },
+
+        {
+            name: 'Passing Guard',
+            players: ['Ja Morant <br><a href="https://placeholder.com"><img src="https://www.si.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_700/MTY5MTczNjQ1NDA5NjU4MzMx/ja-morant-kevin-love-dunk.webp" alt="Image" height="260" width="260"></a><br>HT: 6.3 <br> WT: 175 <br> WING: NA <br> FROM: Murray State <br><br> If the Grizzlies stay at no.2 Morant should be the pick but the trade <br>rumors are swirling.','Darius Garland <br><a href="https://placeholder.com"><img src="https://www.thestepien.com/wp-content/uploads/2019/04/DG.jpg" alt="Image" height="260" width="260"></a><br> HT: 6.2 <br> WT: 170 <br> WING: 6.3 <br> FROM: Vanderbilt <br><br> The Wolves trade up to get a pg. <br>Garland brings a nice scoring punch from the outside to help take the load off of KAT.','Romeo Langford <br><a href="https://placeholder.com"><img src="http://985thesportshub.com/wp-content/uploads/sites/88/2019/11/GettyImages-1167488016.jpg" alt="Image" height="260" width="260"></a><br>HT: 6.6 <br> WT: 195 <br> WING: 6.11 <br> FROM: Indiana <br><br> Romeo had a tough season at Indiana but all the talent is there and his upside is intriguing. <br>If his shot pans out the Warriors could be getting a steal.','Nickeil Alexander Walker <br><a><img src="https://www.nba.com/timberwolves/sites/timberwolves/files/naw.jpg?w=756&h=354" alt="Image" height="260" width="260"</a><br>HT: 6.5 1/2 <br> WT: 204 <br> WING: 6.9 1/2 <br> FROM: Virginia Tech <br><br> The Heat love hard nosed defensive minded players and NAW fits the bill. <br>He is NBA ready and could play big minutes early for the Heat.','Kevin Porter Jr. <br> <a><img src="https://miro.medium.com/proxy/1*T4GSPMZq_ZCXxl2UAibcwQ.jpeg" alt="Image" height="260" width="260"</a><br> HT: 6.5 1/2 <br> WT: 213 <br> WING: 6.9 <br> FROM: USC <br><br> An enigma. Porter Jr. has a boat load of talent but some question marks as well. <br>The Pelicans could swing for the fences here.'],
+        },
+{
+            name: 'Play Maker',
+            players: ['Ja Morant <br><a href="https://placeholder.com"><img src="https://www.si.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_700/MTY5MTczNjQ1NDA5NjU4MzMx/ja-morant-kevin-love-dunk.webp" alt="Image" height="260" width="260"></a><br>HT: 6.3 <br> WT: 175 <br> WING: NA <br> FROM: Murray State <br><br> If the Grizzlies stay at no.2 Morant should be the pick but the trade <br>rumors are swirling.','Darius Garland<br><a href="https://placeholder.com"><img src="https://www.thestepien.com/wp-content/uploads/2019/04/DG.jpg" alt="Image" height="260" width="260"></a><br> HT: 6.2 <br> WT: 170 <br> WING: 6.3 <br> FROM: Vanderbilt <br><br> The Wolves trade up to get a pg. <br>Garland brings a nice scoring punch from the outside to help take the load off of KAT.','Coby White <br> <a href="https://placeholder.com"><img src="https://sportshub.cbsistatic.com/i/r/2019/03/06/c18945a4-9dfd-400f-bb48-7b8baa8326be/thumbnail/770x433/af1393b839c090a72000e4c59ac76f70/usatsi-12183430.jpg" alt="Image" height="200" width="200"></a><br>HT: 6.4 3/4 <br> WT: 191 <br> WING: 6.5 <br> FROM: UNC <br><br> The Bulls will take the last remaining of Garland and Coby White.<br> It is time to move on from Dunn and White would bring new excitement to the backcourt.'],
+}       
+                
+];
+
+
+    var buildSelectors = function(positions){
+        var options = positions.map(function(position){
+           return '<option>' + position.name + '</option>';
+        }).join('');
+
+        return '<select class="filter" name="positions">'+options+'</select>';
+    }
+
+    var filtersElem = document.querySelector('#filters');
+    var resultsElem = document.querySelector('#results');
+
+    filtersElem.innerHTML = buildSelectors(playersByPosition);
+
+    var filterResultsForFilterValue = function(value){
+        var selectedPosition = playersByPosition.find(function(position){
+            return position.name === value;
+        });
+
+        var formattedResults = selectedPosition.players.map(function(player){
+            return '<h3>Player: ' + player + '</h3>';
+        }).join('');
+
+        resultsElem.innerHTML = formattedResults;
+    };
+
+
+    document.querySelectorAll('.filter').forEach(function (filter) {
+        filter.addEventListener('change',function (e) {
+            var selectedPosition = playersByPosition.find(function(position){
+               return position.name === e.currentTarget.value;
+            });
+
+            filterResultsForFilterValue(selectedPosition.name)
+        })
+    })
+
+    filterResultsForFilterValue(playersByPosition[0].name)
+
+</script>
+<a href="NBA_1st_Page.html" class="btn btn-info" role="button">Click Here To Go To Tribute Page</a>
+</body>
+</html>
