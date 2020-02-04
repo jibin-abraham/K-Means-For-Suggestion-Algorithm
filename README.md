@@ -16,9 +16,21 @@ Finally, this algorithm aims at minimizing an objective function, in this case a
 
 K-Means clustering is used in python through Kmeans function for our project. Clustering is done on data extracted of draftees from
 NBA website. Various physical attributes were used to perform the clustering like height, weight, points scored, matches played and even 
-finger length of players. Once clustering is done, the draft players are seggregated into 8 positions (0-7). The result of this algorithm
-is then fed to the HTML web page where a user can select which position of players he prefers. Once the selection is made, a list of
-players appears along with a short description about them. This list is our suggestion.
+finger length of players. Once clustering is done, the draft players are seggregated into 8 positions (0-7). 
+
+The 8 positions were,
+Centers - The traditional centers like Hasan Whiteside and Andre Drummond 
+Scoring Forwards - The forwards who can shoot three like KD and Kevin Love
+Slashing Forwards - Forwards who like to go to the rim like LeBron James and Giannis Antetokounmpo
+Two Way Forwards - Forwards who predominently are defenders like Draymond Green 
+Combo Guards - Guards who are predominently defenders like Pat Beverly 
+Scoring Guards - Guards who are experts in shooting as well as creating their own shots like Kobe and Don Mitchell 
+Passing Guards - Guards who are experts in passing as well as scoring like Steph Curry and Trae Young
+Playmakers - Guards who are experts in passing like Rajon Rondo and Lonzo Ball
+
+The last years drafts were clustered into these 8 positions.
+
+The result of this algorithm is then fed to the HTML web page where a user can select which position of players he prefers. Once the selection is made, a list of players appears along with a short description about them. This list is our suggestion.
 
 
 By:
